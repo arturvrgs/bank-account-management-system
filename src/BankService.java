@@ -19,7 +19,7 @@ public class BankService {
             System.out.println("Enter your full name: ");
             String accountHolderName = scan.nextLine();
 
-            BankAccount savingAccount = new SavingAccount(Integer.toString(db.size() + 1), accountHolderName);
+            BankAccount savingAccount = new SavingAccount(Integer.toString(db.size()), accountHolderName);
             db.add(savingAccount);
 
             System.out.println("Saving account created.");
@@ -28,7 +28,7 @@ public class BankService {
         if(accountType == 2) {
             System.out.println("Enter your full name: ");
             String accountHolderName = scan.nextLine();
-            BankAccount currentAccount = new CurrentAccount(Integer.toString(db.size() + 1),accountHolderName);
+            BankAccount currentAccount = new CurrentAccount(Integer.toString(db.size()),accountHolderName);
             db.add(currentAccount);
 
             System.out.println("Current account created.");
